@@ -1,0 +1,9 @@
+@import './variables';
+@import './fonts';
+body {
+  font-family: 'iransans';
+}
+
+.MuiTypography-root {
+  font-family: 'iransans' !important;
+}

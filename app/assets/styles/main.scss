@@ -1,9 +1,96 @@
-@import './variables';
-@import './fonts';
+@import "./variables";
+@import "./fonts";
 body {
-  font-family: 'iransans';
+  font-family: "iransans";
+  background-color: rgba(243, 244, 246);
 }
 
 .MuiTypography-root {
-  font-family: 'iransans' !important;
+  font-family: "iransans" !important;
+}
+
+button {
+  :focus {
+    outline: none !important;
+  }
+}
+
+.MuiListItemIcon-root {
+  min-width: 30px !important;
+}
+
+.custom-box-shadow {
+  box-shadow: 0px 4px 8px 0px rgb(0 0 0 / 40%);
+}
+
+.text-custom-blue {
+  color: #3497da;
+}
+
+.bg-custom-blue {
+  background-color: #3497da;
+}
+
+
+
+.slick-prev,
+.slick-next {
+    position: absolute;
+    display: block;
+    height: 20px;
+    width: 20px;
+    line-height: 0px;
+    font-size: 0;
+    cursor: pointer;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    padding: 0;
+    border: none;
+    outline: none;
+    z-index: 20;
+    &:hover, &:focus {
+        outline: none;
+        color: gray;
+        &:before {
+            opacity: 1;
+        }
+    }
+    &.slick-disabled:before {
+        opacity: 1;
+    }
+    &:before {
+        font-size: 25px;
+        line-height: 1;
+        color: gray;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+.slick-prev {
+    left: 15px;
+    [dir="rtl"] & {
+        left: auto;
+        right: -15px;
+    }
+    &:before {
+        content: "\2190";
+        [dir="rtl"] & {
+            content: "\2192";
+        }
+    }
+}
+.slick-next {
+    right: 15px;
+    [dir="rtl"] & {
+        left: -15px;
+        right: auto;
+    }
+    &:before {
+        content: "\2192";
+        [dir="rtl"] & {
+            content: "\2190";
+        }
+    }
 }

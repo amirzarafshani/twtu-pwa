@@ -58,7 +58,7 @@ class SwipeDrawer extends React.Component {
             onClose={this.toggleDrawer('open', false)}
             onOpen={this.toggleDrawer('open', true)}
           >
-            <Link to="/dashboard" className="px-4 py-2 ">
+            <Link to="/" className="px-4 py-2">
               <img src={logo} alt="" className="h-12" />
             </Link>
 
@@ -72,93 +72,103 @@ class SwipeDrawer extends React.Component {
             >
               <div className={classes.list}>
                 <List>
-                  <Link to="/dashboard">
+                  <Link to="/">
                     <ListItem button>
                       <ListItemIcon>
-                        <BiCaretLeftCircle size="1.5rem" />
+                        <BiCaretLeftCircle className="w-5 h-5 text-custom-blue" />
                       </ListItemIcon>
-                      <ListItemText primary={'پیش خوان'} />
+                      <ListItemText primary={'اخبار'} />
                     </ListItem>
                   </Link>
 
-                  <Link to="/dashboard/profile">
+                  <Link to="/">
                     <ListItem button>
                       <ListItemIcon>
-                        <BiCaretLeftCircle size="1.5rem" />
+                        <BiCaretLeftCircle className="w-5 h-5 text-custom-blue" />
                       </ListItemIcon>
-                      <ListItemText primary={'اطلاعات من'} />
+                      <ListItemText primary={'تابلوی اعلانات'} />
                     </ListItem>
                   </Link>
 
-                  <Link to="/dashboard/documents">
+                  <Link to="/">
                     <ListItem button>
                       <ListItemIcon>
-                        <BiCaretLeftCircle size="1.5rem" />
+                        <BiCaretLeftCircle className="w-5 h-5 text-custom-blue" />
                       </ListItemIcon>
-                      <ListItemText primary={'لیست مدارک شما'} />
+                      <ListItemText primary={'پروفایل'} />
                     </ListItem>
                   </Link>
 
-                  <Link to="/dashboard/myrulings">
+                  <Link to="/">
                     <ListItem button>
                       <ListItemIcon>
-                        <BiCaretLeftCircle size="1.5rem" />
+                        <BiCaretLeftCircle className="w-5 h-5 text-custom-blue" />
                       </ListItemIcon>
-                      <ListItemText primary={'احکام من'} />
+                      <ListItemText primary={'پیام خصوصی-عمومی'} />
                     </ListItem>
                   </Link>
 
-                  <Link to="/dashboard/leagues">
+                  <Link to="/">
                     <ListItem button>
                       <ListItemIcon>
-                        <BiCaretLeftCircle size="1.5rem" />
+                        <BiCaretLeftCircle className="w-5 h-5 text-custom-blue" />
                       </ListItemIcon>
-                      <ListItemText primary={'مسابقات من'} />
+                      <ListItemText primary={'مشخصات پرونده'} />
                     </ListItem>
                   </Link>
 
-                  <Link to="/dashboard/payments">
+                  <Link to="/">
                     <ListItem button>
                       <ListItemIcon>
-                        <BiCaretLeftCircle size="1.5rem" />
+                        <BiCaretLeftCircle className="w-5 h-5 text-custom-blue" />
+                      </ListItemIcon>
+                      <ListItemText primary={'حق عضویت'} />
+                    </ListItem>
+                  </Link>
+
+                  {/* <a
+                    onClick={() =>
+                      this.setState({ changePasswordDialogShow: true })
+                    }
+                  > */}
+                  <Link to="/">
+                    <ListItem button>
+                      <ListItemIcon>
+                        <BiCaretLeftCircle className="w-5 h-5 text-custom-blue" />
                       </ListItemIcon>
                       <ListItemText primary={'سوابق پرداخت'} />
                     </ListItem>
                   </Link>
-
-                  <a
-                    onClick={() =>
-                      this.setState({ changePasswordDialogShow: true })
-                    }
-                  >
+                  {/* </a> */}
+                  <Link to="/">
                     <ListItem button>
                       <ListItemIcon>
-                        <BiCaretLeftCircle size="1.5rem" />
+                        <BiCaretLeftCircle className="w-5 h-5 text-custom-blue" />
                       </ListItemIcon>
-                      <ListItemText primary={'تغییر کلمه عبور'} />
+                      <ListItemText primary={'تماس با ما'} />
                     </ListItem>
-                  </a>
-                </List>
-                <List>
-                  <a href="http://ikf.ir/">
+                  </Link>
+                  <Link to="/InsuranceForm">
                     <ListItem button>
                       <ListItemIcon>
-                        <BiCaretLeftCircle size="1.5rem" />
+                        <BiCaretLeftCircle className="w-5 h-5 text-custom-blue" />
                       </ListItemIcon>
-                      <ListItemText primary={'سایت فدراسیون'} />
+                      <ListItemText primary={'فرم بیمه'} />
                     </ListItem>
-                  </a>
+                  </Link>
                 </List>
                 <Divider />
                 <List>
-                  <a onClick={() => this.props.logout()}>
-                    <ListItem button>
-                      <ListItemIcon>
-                        <BiCaretLeftCircle className="w-6 h-6 text-blue-900 fill-current" />
-                      </ListItemIcon>
-                      <ListItemText primary="خروج از سامانه" />
-                    </ListItem>
-                  </a>
+                  <Link to="/Login">
+                    <a onClick={() => this.props.logout()}>
+                      <ListItem button>
+                        <ListItemIcon className="w-5">
+                          <BiCaretLeftCircle className="w-5 h-5 text-custom-blue" />
+                        </ListItemIcon>
+                        <ListItemText primary="خروج" />
+                      </ListItem>
+                    </a>
+                  </Link>
                 </List>
 
                 {/* <ContactUsModal open={this.state.showContactUsModal} onClose={() => this.setState({ showContactUsModal: false })} /> */}

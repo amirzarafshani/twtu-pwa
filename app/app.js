@@ -16,7 +16,8 @@ import { ConnectedRouter } from 'connected-react-router';
 import FontFaceObserver from 'fontfaceobserver';
 import history from 'utils/history';
 import 'sanitize.css/sanitize.css';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 // Import root app
 import App from 'containers/App';
 
@@ -47,6 +48,7 @@ const ConnectedApp = () => (
     <ConnectedRouter history={history}>
       <HelmetProvider>
         <App />
+        <ToastContainer position={toast.POSITION.TOP_CENTER} />
       </HelmetProvider>
     </ConnectedRouter>
   </Provider>

@@ -12,37 +12,28 @@ class Header extends React.Component {
   }
   render() {
     return (
-      <div
-        style={{
-          flexGrow: 1,
-          maxHeight: 71,
-          width: '100%',
-          backgroundColor: '#fff',
-        }}
-      >
+      <div className="sticky top-0 max-h-16 w-full bg-white mb-10">
         <AppBar
-          position="fixed"
+          position="sticky"
           color="inherit"
           className="appbar"
-          elevation={3}
-        >
+          elevation={3}>
           <Toolbar className="justify-between">
             <IconButton
               edge="start"
               color="inherit"
               aria-label="menu"
-              className="menu-icon"
-            >
+              className="menu-icon">
               <SwipeDrawer />
             </IconButton>
 
-            <Link to="/dashboard" className="title">
+            <Link to="/" className="title">
               <img src={logo} alt="" className="h-12" />
             </Link>
 
-            <IconButton aria-label="notifications" color="inherit">
+            <IconButton aria-label="notifications">
               <Badge badgeContent={0} color="secondary">
-                <IoIosChatbubbles color="#4DA6EA" fontSize="35px" />
+                <IoIosChatbubbles className="text-custom-blue text-3xl" />
               </Badge>
             </IconButton>
           </Toolbar>
